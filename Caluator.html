@@ -1,0 +1,90 @@
+<html>
+ <head>
+   <style>
+     *{
+       margin:0px;
+       padding:0px;
+      }
+    body{
+       margin:50px;
+       }
+    #t1{
+       border:3px solid aqua;
+       height:470px;
+       width:400px;
+       background-color:green;
+       border-radius:20px;
+       //box-shadow:12px 0px 100px yellow,-12px 0px 100px blue;
+       }
+    #t2{
+       color:red;
+       background-color:aqua;
+       margin:13px;
+       font-size:20px;
+       border-radius:18%;
+       height:43px;
+       width:50px;
+       //box-shadow:-12px 0px 30px blue;
+       //font-size:20px;
+       }
+    #t3{
+       font-size:30px;
+       margin:25px;
+       text-align:right;
+       border-radius:8px aqua;
+       height:60px;
+       color:red;
+       background-color:yellow;
+       //box-shadow:-12px 0px 30px green;
+      }
+   </style>
+ </head>
+<body bgcolor="pink">
+<center>
+<div id="t1">
+ <input type="text" id="t3" placeholder="0" size="15px" name="t3"/><br>
+ <input type="button" id="t2" value="AC" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="Del" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="%" onclick="cal(this)"/>
+ <input type="button" id="t2" value="/" onclick="cal(this)"/><br>
+ <input type="button"id="t2"  value="7" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="8" onclick="cal(this)"/>
+ <input type="button" id="t2" value="9" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="*" onclick="cal(this)"/><br>
+ <input type="button" id="t2" value="4" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="5" onclick="cal(this)"/>
+ <input type="button" id="t2" value="6" onclick="cal(this)"/>
+ <input type="button" id="t2" value="+" onclick="cal(this)"/><br>
+ <input type="button"id="t2"  value="1" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="2" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="3" onclick="cal(this)"/>
+ <input type="button"id="t2"  value="-" onclick="cal(this)"/><br>
+ <input type="button"id="t2"  value="00"onclick="cal(this)"/>
+ <input type="button" id="t2" value="0" onclick="cal(this)"/>
+ <input type="button" id="t2" value="." onclick="cal(this)"/>
+ <input type="button" id="t2" value="=" onclick="cal(this)"/>
+</div>
+<script>
+   let c;
+   c=document.getElementById("t2");
+   function cal(obj){
+    t=obj.value;
+     if(t=='AC'){
+        t3.value="";
+      //console.log(t3.value);
+    }
+     else if(t=='Del'){
+       t3.value=t3.value.toString().slice(0,-1);
+       //t3.value=c-1;
+       //console.log(t3.value);
+    }
+     else if(t!='='){
+     t3.value+=t;
+    }
+   else
+    t3.value=eval(t3.value);
+ }
+</script>
+</center>
+</body>
+</html>
